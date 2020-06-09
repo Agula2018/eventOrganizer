@@ -1,4 +1,4 @@
-package com.project.eventOrganizer.model;
+package com.project.eventOrganizer.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
