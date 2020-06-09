@@ -1,10 +1,12 @@
 package com.project.eventOrganizer.controller;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/users")
+@AllArgsConstructor
+@RequestMapping(path = "/user/")
 public class UserController {
 
 

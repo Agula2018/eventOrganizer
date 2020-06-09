@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List all Events</title>
+</head>
+<body>
+<table border="1" , cellpadding="4px">
+    <tr>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Address</th>
+        <th>Access</th>
+        <th>Organizer</th>
+    </tr>
+    <tr th:each="event : ${events}">
+        <td th:text="${event.getName()}"></td>
+        <td th:text="${event.getDate()}"></td>
+        <td th:text="${event.getAddress()}"></td>
+        <td th:text="${event.getAccess()}"></td>
+        <td th:text="${event.getOrganizer()}"></td>
+    </tr>
+</table>
+</body>
+</html>

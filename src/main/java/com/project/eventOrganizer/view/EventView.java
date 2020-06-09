@@ -1,21 +1,19 @@
-package com.project.eventOrganizer.model;
+package com.project.eventOrganizer.view;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Length;
-import javax.validation.constraints.NotNull;
+
 import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EventForm {
+@Builder
+public class EventView {
 
-    @Length(min = 2, max = 50)
-    private String eventName;
-
-    @NotNull
+    private String name;
     private LocalDateTime date;
     private String address;
     private String access;

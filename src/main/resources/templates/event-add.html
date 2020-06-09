@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Event</title>
+</head>
+<body>
+<h1>Add Event</h1>
+
+<form th:action="@{/event/add}" th:object="${event}" method="post">
+    <p>name: <input type="text" th:field="*{name}" th:value="*{name}"></p>
+    <p>address: <input type="text" th:field="*{address}" th:value="*{address}"></p>
+    <p>access: <input type="text" th:field="*{access}" th:value="*{access}"></p>
+    <p>organizer: <input type="text" th:field="*{organizer}" th:value="*{organizer}"></p>
+
+    <p> <input type="submit" value="add event"></p>
+
+</form>
+
+</body>
+</html>
