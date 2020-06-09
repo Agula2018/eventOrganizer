@@ -1,5 +1,5 @@
-# weatherCheckApp - simple app
-> Console client for Airly API (https://map.airly.eu/)!
+# eventOrganizer - simple app
+>Web service enabling organization of events.
 
 ## Table of contents
 * [General info](#general-info)
@@ -10,14 +10,17 @@
 * [Contact](#contact)
 
 ## General info
-This app applies to Airly API version 2.0 based on REST and organized around resources (Installations and Measurements). App is built-in HTTP features for issuing requests (HTTP methods) and handling errors (HTTP statuses).
 
-WeatherCheckApp interact with Airly API from a client-side web applications served.
-
-App interact with Airly API endpoints which return content in JSON format (including errors) which are mapped to JAVA object. App return mapped endpoints: Installations and Measurements.
+## Main system functions
+* Creating events
+* Inviting participants
+* Acceptance of participation
+* Account Registration
+* Event searching option
+* Sharing comments
 
 ## 
-![Example screenshot](event.png)
+![Example screenshot](./readme/event.png)
 
 ## Technologies
 * JAVA - version 8
