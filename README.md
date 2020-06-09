@@ -33,7 +33,7 @@
 
 
 ## Code Examples
-Example of usage controllers:
+Example of usage: 
 
 ![Example screenshot](./readme/code.png)
 
@@ -43,12 +43,12 @@ Example of console output:
 
 ## Features
 List of features ready:
-* TEST Junit
-* TEST Mockito
-
+* Creating events and database 
 
 To-do list:
-* For future development create a database 
+* For future development:  
+* TEST Junit
+* TEST Mockito
 
 ## Status
 Project is: 
