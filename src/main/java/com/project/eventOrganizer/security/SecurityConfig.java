@@ -11,19 +11,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
-/**
- * Security Configuration
- */
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    /**
-     * UserDetails - username, password and role.
-     *
-     * @return User details saved in computer memory
-     */
+
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails admin = User.withDefaultPasswordEncoder()
@@ -32,13 +25,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .roles("ADMIN")
                 .build();
 
-        UserDetails user = User.withDefaultPasswordEncoder()
-                .username("user")
-                .password("user")
-                .roles("USER")
-                .build();
+        //jak zrobic rejestracje uzytkownika UserBuilderem User.builder()?
+        //wczytywanie hasel i loginow z bazy danych.
 
-        return new InMemoryUserDetailsManager(admin, user);
+        return new InMemoryUserDetailsManager(admin);
     }
 
     @Override
@@ -49,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .permitAll()
-                .defaultSuccessUrl("/event/add")
+                .defaultSuccessUrl("/user/add")
                 .and()
                 .logout()
                 .permitAll();

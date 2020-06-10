@@ -15,7 +15,7 @@ public class Participation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
     private boolean organizerApproval;
-
     private boolean userApproval;
 }

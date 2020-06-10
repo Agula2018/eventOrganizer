@@ -1,11 +1,10 @@
 package com.project.eventOrganizer.service;
 
-import com.project.eventOrganizer.entityBuilder.EventBuilder;
+import com.project.eventOrganizer.converter.EventBuilder;
 import com.project.eventOrganizer.repository.EventRepository;
 import com.project.eventOrganizer.view.EventView;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service

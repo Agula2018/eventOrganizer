@@ -1,25 +1,15 @@
-package com.project.eventOrganizer.entityBuilder;
+package com.project.eventOrganizer.converter;
 
 import com.project.eventOrganizer.model.Event;
 import com.project.eventOrganizer.view.EventView;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Event Converter
- */
 @Component
 public class EventBuilder implements ModelConverter<Event, EventView>{
 
-    /**
-     * Converts EventView from view to Event entity,
-     * to avoid incomplete Entities in repository.
-     *
-     * @param view EventView
-     * @return Event model
-     */
+
     @Override
     public Event convert(EventView view) {
         return Event.builder()
@@ -28,15 +18,10 @@ public class EventBuilder implements ModelConverter<Event, EventView>{
                 .address(view.getAddress())
                 .access(view.getAccess())
                 .organizer(view.getOrganizer())
+//                .users(view.getUsers())
                 .build();
     }
 
-    /**
-     * Converts List of Events to List of EventViews.
-     *
-     * @param modelList list of Event entities
-     * @return list of EventView
-     */
     @Override
     public List<EventView> convert(List<Event> modelList) {
         return modelList.stream().map(this::convert).collect(Collectors.toList());
@@ -49,6 +34,7 @@ public class EventBuilder implements ModelConverter<Event, EventView>{
                 .address(event.getAddress())
                 .access(event.getAccess())
                 .organizer(event.getOrganizer())
+//                .users(event.getUsers())
                 .build();
     }
 }

@@ -1,4 +1,4 @@
-package com.project.eventOrganizer.entityBuilder;
+package com.project.eventOrganizer.converter;
 
 import java.util.List;
 
