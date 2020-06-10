@@ -23,7 +23,7 @@
 ![Example screenshot](./readme/event.png)
 
 ## Technologies
-* JAVA - version 8
+* JAVA - version 11
 * Spring Boot - version 2.5.0
 * Spring MVC 
 * Spring ReST
